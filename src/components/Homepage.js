@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 
 const Homepage = () => {
     const { loginWithPopup, isAuthenticated } = useAuth0();
@@ -89,7 +88,7 @@ const Homepage = () => {
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
     );
 };
 

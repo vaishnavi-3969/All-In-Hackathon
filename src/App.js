@@ -4,8 +4,8 @@ import Homepage from "./components/Homepage";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import EmployeeHomepage from "./components/employee/EmployeeHomepage";
-import EmployeerHomepage from "./components/employeer/EmployerHomepage";
-import EmployerProfile from "./components/employeer/EmployerProfile";
+import EmployeerHomepage from "./components/employer/EmployerHomepage";
+import EmployerProfile from "./components/employer/EmployerProfile";
 import EmployeeProfile from "./components/employee/EmployeeProfile";
 import UserType from "./components/UserType";
 

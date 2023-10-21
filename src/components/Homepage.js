@@ -89,7 +89,7 @@ const Homepage = () => {
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
     );
 };
 

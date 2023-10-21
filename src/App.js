@@ -25,6 +25,7 @@ function App() {
             <Route path="/employeer_homepage" element={<EmployeerHomepage />} exact />
             <Route path="/employee_profile" element={<EmployeeProfile />} exact />
             <Route path="/employeer_profile" element={<EmployeerProfile />} exact />
+            
           </Routes>
         </Auth0Provider>
       </BrowserRouter>

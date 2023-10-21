@@ -4,10 +4,11 @@ import Homepage from "./components/Homepage";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import EmployeeHomepage from "./components/employee/EmployeeHomepage";
-import EmployeerHomepage from "./components/employer/EmployerHomepage";
+import EmployerHomepage from "./components/employer/EmployerHomepage";
 import EmployerProfile from "./components/employer/EmployerProfile";
 import EmployeeProfile from "./components/employee/EmployeeProfile";
 import UserType from "./components/UserType";
+import Error from "./components/Error";
 
 function App() {
 
@@ -24,12 +25,13 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path='*' element={<Error />} exact />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/" element={<Homepage />} exact />
             <Route path="/user_type" element={<UserType />} exact />
             <Route path="/employee_homepage" element={<EmployeeHomepage />} exact />
-            <Route path="/employer_homepage" element={<EmployeerHomepage />} exact />
+            <Route path="/employer_homepage" element={<EmployerHomepage />} exact />
             <Route path="/employee_profile" element={<EmployeeProfile />} exact />
             <Route path="/employer_profile" element={<EmployerProfile />} exact />
           </Routes>

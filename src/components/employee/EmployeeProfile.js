@@ -28,7 +28,7 @@ const EmployeeProfile = () => {
         };
 
         fetchUserProfile();
-    }, [db, user.email]);
+    }, []);
 
     return (
         <div className="p-8 bg-white shadow-lg text-black">

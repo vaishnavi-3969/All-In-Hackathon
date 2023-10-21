@@ -5,6 +5,7 @@ import EmployeeHomepage from "./components/employee/EmployeeHomepage";
 import EmployeerHomepage from "./components/employeer/EmployeerHomepage";
 import EmployeerProfile from "./components/employeer/EmployeerProfile";
 import EmployeeProfile from "./components/employee/EmployeeProfile";
+import UserType from "./components/UserType";
 
 function App() {
 
@@ -21,11 +22,12 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Homepage />} exact />
+            <Route path="/user_type" element={<UserType />} exact />
             <Route path="/employee_homepage" element={<EmployeeHomepage />} exact />
             <Route path="/employeer_homepage" element={<EmployeerHomepage />} exact />
             <Route path="/employee_profile" element={<EmployeeProfile />} exact />
             <Route path="/employeer_profile" element={<EmployeerProfile />} exact />
-            
+
           </Routes>
         </Auth0Provider>
       </BrowserRouter>

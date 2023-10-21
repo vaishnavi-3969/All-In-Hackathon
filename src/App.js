@@ -4,8 +4,8 @@ import Homepage from "./components/Homepage";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import EmployeeHomepage from "./components/employee/EmployeeHomepage";
-import EmployeerHomepage from "./components/employeer/EmployeerHomepage";
-import EmployeerProfile from "./components/employeer/EmployeerProfile";
+import EmployeerHomepage from "./components/employeer/EmployerHomepage";
+import EmployerProfile from "./components/employeer/EmployerProfile";
 import EmployeeProfile from "./components/employee/EmployeeProfile";
 import UserType from "./components/UserType";
 
@@ -29,9 +29,9 @@ function App() {
             <Route path="/" element={<Homepage />} exact />
             <Route path="/user_type" element={<UserType />} exact />
             <Route path="/employee_homepage" element={<EmployeeHomepage />} exact />
-            <Route path="/employeer_homepage" element={<EmployeerHomepage />} exact />
+            <Route path="/employer_homepage" element={<EmployeerHomepage />} exact />
             <Route path="/employee_profile" element={<EmployeeProfile />} exact />
-            <Route path="/employeer_profile" element={<EmployeerProfile />} exact />
+            <Route path="/employer_profile" element={<EmployerProfile />} exact />
           </Routes>
         </Auth0Provider>
       </BrowserRouter>

@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Auth0Provider } from '@auth0/auth0-react';
 import Homepage from "./components/Homepage";
+import About from "./components/About";
+import Contact from "./components/Contact";
 import EmployeeHomepage from "./components/employee/EmployeeHomepage";
 import EmployeerHomepage from "./components/employeer/EmployeerHomepage";
 import EmployeerProfile from "./components/employeer/EmployeerProfile";
@@ -20,12 +22,14 @@ function App() {
           redirectUri={window.location.origin}
         >
           <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/" element={<Homepage />} exact />
             <Route path="/employee_homepage" element={<EmployeeHomepage />} exact />
             <Route path="/employeer_homepage" element={<EmployeerHomepage />} exact />
             <Route path="/employee_profile" element={<EmployeeProfile />} exact />
             <Route path="/employeer_profile" element={<EmployeerProfile />} exact />
-            
           </Routes>
         </Auth0Provider>
       </BrowserRouter>

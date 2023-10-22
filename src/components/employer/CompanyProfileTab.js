@@ -30,13 +30,23 @@ const CompanyProfileTab = () => {
         setExpandedCompanyId(expandedCompanyId === companyId ? null : companyId);
     };
 
-    const getIconForField = (value) => {
+    const getIconForField = (field, value) => {
         if (value === true) {
             return <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />;
         } else if (value === false) {
             return <FontAwesomeIcon icon={faTimes} className="text-red-500 mr-2" />;
+        } else if (field === 'officialWebsite' && value) {
+            return (
+                <a href={value} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                    <FontAwesomeIcon icon={faGlobe} className="text-blue-500 mr-2" />
+                </a>
+            );
+        } else if (field === 'companySize' || field === 'industry') {
+            return <FontAwesomeIcon icon={faBuilding} className="text-gray-600 mr-2" />;
+        } else if (field === 'diversity') {
+            return <FontAwesomeIcon icon={faUsers} className="text-gray-600 mr-2" />;
         } else {
-            return <FontAwesomeIcon icon={faInfoCircle} className="text-gray-500 mr-2" />;
+            return <FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2"/>;
         }
     };
 
@@ -46,9 +56,8 @@ const CompanyProfileTab = () => {
                 companies.map((company) => (
                     <div
                         key={company.id}
-                        className={`bg-white rounded-md p-6 shadow-md mb-4 ${
-                            expandedCompanyId === company.id ? 'bg-blue-100' : ''
-                        }`}
+                        className={`bg-white rounded-md p-6 shadow-md mb-4 ${expandedCompanyId === company.id ? 'bg-blue-100' : ''
+                            }`}
                     >
                         <div className="flex justify-between items-center">
                             <h2 className="text-2xl font-semibold">{company.companyName}</h2>
@@ -62,22 +71,22 @@ const CompanyProfileTab = () => {
                         <p className="mt-2 text-gray-600">{company.companyDescription}</p>
                         <div className="mt-4">
                             <div className="flex items-center mb-2">
-                                {getIconForField(company.accommodationsAvailable)}
+                                {getIconForField('accommodationsAvailable', company.accommodationsAvailable)}
                                 <span className="text-gray-600">Accommodations available</span>
                             </div>
                             <div className="flex items-center mb-2">
-                                {getIconForField(company.disabilityWheelchairsAvailable)}
+                                {getIconForField('disabilityWheelchairsAvailable', company.disabilityWheelchairsAvailable)}
                                 <span className="text-gray-600">Disability wheelchairs available</span>
                             </div>
                             <div className="flex items-center mb-2">
-                                {getIconForField(true)} {/* Example for 'true' value */}
+                                {getIconForField('companySize', company.companySize)}
                                 <span className="text-gray-600">
                                     Size: {company.companySize} | Industry: {company.industry}
                                 </span>
                             </div>
                             {company.officialWebsite && (
                                 <div className="flex items-center mb-2">
-                                    {getIconForField(true)} {/* Example for 'true' value */}
+                                    {getIconForField('officialWebsite', company.officialWebsite)} 
                                     <a
                                         href={company.officialWebsite}
                                         target="_blank"
@@ -89,7 +98,7 @@ const CompanyProfileTab = () => {
                                 </div>
                             )}
                             <div className="flex items-center mb-2">
-                                {getIconForField(company.diversity)}
+                                {getIconForField('diversity', company.diversity)} 
                                 <span className="text-gray-600">Diversity: {company.diversity}</span>
                             </div>
                             <div className="flex items-center mb-2">

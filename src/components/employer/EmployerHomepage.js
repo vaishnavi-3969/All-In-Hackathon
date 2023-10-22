@@ -36,7 +36,7 @@ const EmployerHomepage = () => {
                         tabName="companyProfile"
                         setActiveTab={setActiveTab}
                     >
-                        Company Profile
+                        Your Companies Profile
                     </TabButton>
                     <TabButton
                         activeTab={activeTab}

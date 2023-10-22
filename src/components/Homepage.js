@@ -38,6 +38,9 @@ const Homepage = () => {
                         <div>
                             <Link to="/about" className="text-black font-bold text-xl p-4">About</Link>
                         </div>
+                        <div>
+                            <Link to="/contact" className="text-black font-bold text-xl p-4">Contact Us</Link>
+                        </div>
                     </div>
                     <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
                         <div className='text-center'>

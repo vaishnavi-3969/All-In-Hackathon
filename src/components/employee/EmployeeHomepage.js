@@ -11,7 +11,7 @@ import VRWorkspace from './VRWorkspace';
 
 const EmployeeHomepage = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
-    
+
     return (
         <div>
             <EmployeeNavbar />
@@ -85,7 +85,7 @@ const EmployeeHomepage = () => {
                 {activeTab === 'resources' && <Resources />}
                 {activeTab === 'settings' && <SettingsTab />}
                 {activeTab === 'vrworkspace' && <VRWorkspace />}
-
+                
             </div>
         </div>
     );

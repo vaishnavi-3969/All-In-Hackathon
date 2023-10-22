@@ -7,7 +7,6 @@ import MessagesTab from '../employer/MessagesTab';
 import SettingsTab from '../employer/SettingsTab';
 import Notifications from './Notifications';
 import Resources from './Resources';
-import VRWorkspace from './VRWorkspace';
 
 const EmployeeHomepage = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
@@ -84,8 +83,7 @@ const EmployeeHomepage = () => {
                 {activeTab === 'notifications' && <Notifications />}
                 {activeTab === 'resources' && <Resources />}
                 {activeTab === 'settings' && <SettingsTab />}
-                {activeTab === 'vrworkspace' && <VRWorkspace />}
-                
+
             </div>
         </div>
     );

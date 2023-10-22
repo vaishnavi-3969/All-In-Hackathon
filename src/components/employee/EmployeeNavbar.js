@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiUser, FiBriefcase, FiInfo } from 'react-icons/fi';
+import { FiUser, FiBriefcase, FiInfo, FiLogOut } from 'react-icons/fi';
 import Logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const EmployeeNavbar = () => {
+    const { logout } = useAuth0();
+
     return (
         <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -20,14 +23,14 @@ const EmployeeNavbar = () => {
                         </Link>
                     </div>
                     <Link to="/employee_homepage">
-                    <motion.h1
-                        initial={{ x: -100 }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="text-2xl font-semibold"
-                    >
-                        EquiHire
-                    </motion.h1>
+                        <motion.h1
+                            initial={{ x: -100 }}
+                            animate={{ x: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="text-2xl font-semibold"
+                        >
+                            EquiHire
+                        </motion.h1>
                     </Link>
                 </div>
                 <div className="flex items-center space-x-6">
@@ -57,6 +60,16 @@ const EmployeeNavbar = () => {
                         className="cursor-pointer"
                     >
                         <FiInfo className="text-2xl" />
+                    </motion.div>
+                    <motion.div
+                        initial={{ scale: 0.5 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        whileHover={{ scale: 1.2 }}
+                        className="cursor-pointer"
+                        onClick={() => logout()}
+                    >
+                        <FiLogOut className="text-2xl" />
                     </motion.div>
                 </div>
             </div>

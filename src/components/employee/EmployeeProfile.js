@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getDatabase, ref, get } from 'firebase/database';
+import { getDatabase, ref, get, set } from 'firebase/database';
 import { useAuth0 } from '@auth0/auth0-react';
 import { db } from '../db/Firebase';
 import EmployeeNavbar from './EmployeeNavbar';
@@ -29,7 +29,16 @@ const EmployeeProfile = () => {
         };
 
         fetchUserProfile();
-    }, []);
+    }, [user]);
+
+    const saveProfileData = (updatedData) => {
+        // Update the profile data in Firebase
+        const userRef = ref(db, 'employee_profiles');
+        set(userRef, updatedData);
+
+        // Update the local state with the changes
+        setProfileData(updatedData);
+    };
 
     return (
         <div>
@@ -63,15 +72,24 @@ const EmployeeProfile = () => {
 
                 <div className="w-3/4 p-4">
                     {activeSection === 'basicInfo' && (
-                        <BasicInfoSection profileData={profileData} />
+                        <BasicInfoSection
+                            profileData={profileData}
+                            saveProfileData={saveProfileData}
+                        />
                     )}
 
                     {activeSection === 'employmentHistory' && (
-                        <EmploymentHistorySection profileData={profileData} />
+                        <EmploymentHistorySection
+                            profileData={profileData}
+                            saveProfileData={saveProfileData}
+                        />
                     )}
 
                     {activeSection === 'moreInfo' && (
-                        <MoreInfoSection profileData={profileData} />
+                        <MoreInfoSection
+                            profileData={profileData}
+                            saveProfileData={saveProfileData}
+                        />
                     )}
                 </div>
             </div>
@@ -79,26 +97,95 @@ const EmployeeProfile = () => {
     );
 };
 
-const BasicInfoSection = ({ profileData }) => {
+const BasicInfoSection = ({ profileData, saveProfileData }) => {
+    const [basicInfo, setBasicInfo] = useState(profileData && profileData.basicInfo);
+
+    const handleSave = () => {
+        const updatedData = {
+            ...profileData,
+            basicInfo: basicInfo,
+        };
+        saveProfileData(updatedData);
+    };
+
     return (
         <div>
-            {/* Display basic info here */}
+            {/* Add input fields for basic info and a Save button */}
+            <input
+                type="text"
+                placeholder="Name"
+                value={basicInfo.name}
+                onChange={(e) => setBasicInfo({ ...basicInfo, name: e.target.value })}
+            />
+            <input
+                type="text"
+                placeholder="Email"
+                value={basicInfo.email}
+                onChange={(e) => setBasicInfo({ ...basicInfo, email: e.target.value })}
+            />
+            <button onClick={handleSave}>Save</button>
         </div>
     );
 };
 
-const EmploymentHistorySection = ({ profileData }) => {
+const EmploymentHistorySection = ({ profileData, saveProfileData }) => {
+    const [employmentHistory, setEmploymentHistory] = useState(profileData && profileData.employmentHistory);
+
+    const handleSave = () => {
+        const updatedData = {
+            ...profileData,
+            employmentHistory: employmentHistory,
+        };
+        saveProfileData(updatedData);
+    };
+
     return (
         <div>
-            {/* Display employment history here */}
+            {/* Add input fields for employment history and a Save button */}
+            <input
+                type="text"
+                placeholder="Company"
+                value={employmentHistory.company}
+                onChange={(e) => setEmploymentHistory({ ...employmentHistory, company: e.target.value })}
+            />
+            <input
+                type="text"
+                placeholder="Position"
+                value={employmentHistory.position}
+                onChange={(e) => setEmploymentHistory({ ...employmentHistory, position: e.target.value })}
+            />
+            <button onClick={handleSave}>Save</button>
         </div>
     );
 };
 
-const MoreInfoSection = ({ profileData }) => {
+const MoreInfoSection = ({ profileData, saveProfileData }) => {
+    const [moreInfo, setMoreInfo] = useState(profileData && profileData.moreInfo);
+
+    const handleSave = () => {
+        const updatedData = {
+            ...profileData,
+            moreInfo: moreInfo,
+        };
+        saveProfileData(updatedData);
+    };
+
     return (
         <div>
-            {/* Display more info here */}
+            {/* Add input fields for more info and a Save button */}
+            <input
+                type="text"
+                placeholder="Education"
+                value={moreInfo.education}
+                onChange={(e) => setMoreInfo({ ...moreInfo, education: e.target.value })}
+            />
+            <input
+                type="text"
+                placeholder="Skills"
+                value={moreInfo.skills}
+                onChange={(e) => setMoreInfo({ ...moreInfo, skills: e.target.value })}
+            />
+            <button onClick={handleSave}>Save</button>
         </div>
     );
 };

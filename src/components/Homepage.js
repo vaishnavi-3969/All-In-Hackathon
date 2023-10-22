@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-
+import Logo from '../assets/logo.png';
 const Homepage = () => {
     const { loginWithPopup, isAuthenticated } = useAuth0();
     const navigate = useNavigate();
@@ -36,15 +36,14 @@ const Homepage = () => {
                 <div className="w-full md:w-1/2 flex flex-col">
                     <div className="flex flex-row justify-between md:justify-start pt-12 md:pl-12 md:-mb-24">
                         <div>
-                            <a href="#" className="text-black font-bold text-xl p-4">
-                                Logo
-                            </a>
                             <Link to="/about" className="text-black font-bold text-xl p-4">About</Link>
                         </div>
                     </div>
                     <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-                        <p className="text-center text-3xl">Welcome to EquiHire.</p>
-                        <button
+                        <div className='text-center'>
+                            <img src={Logo} alt='' width={100} className="mx-auto" />
+                            <p className={`text-center text-3xl`}>Welcome to "EquiHire".</p>
+                        </div>                        <button
                             className="bg-white text-black font-bold text-lg p-2 mt-8 border cursor-pointer hover:bg-gray-100 hover:text-white"
                             onClick={handleLoginAsJobSeeker}
                         >

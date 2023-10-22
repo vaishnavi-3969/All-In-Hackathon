@@ -3,6 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { collection, addDoc, updateDoc, query, where, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { db } from './db/Firebase';
+import annyang from 'annyang';
 
 const UserType = () => {
   const { user, isAuthenticated } = useAuth0();
@@ -27,6 +28,20 @@ const UserType = () => {
       };
 
       checkUser();
+    }
+
+    // Initialize voice recognition with annyang
+    if (annyang) {
+      annyang.addCommands({
+        'employee': () => {
+          setSelectedRole('employee');
+          handleRoleSelection();
+        },
+        'employer': () => {
+          setSelectedRole('employer');
+          handleRoleSelection();
+        },
+      });
     }
   }, [user.email, isAuthenticated]);
 
@@ -60,18 +75,7 @@ const UserType = () => {
   };
 
   const handleSpeechRecognition = () => {
-    const recognition = new window.webkitSpeechRecognition();
-    recognition.onresult = (event) => {
-      const speechResult = event.results[0][0].transcript.toLowerCase();
-      setRecognizedSpeech((prevSpeech) => prevSpeech + ' ' + speechResult);
-      if (speechResult.includes('employee')) {
-        setSelectedRole('employee');
-      } else if (speechResult.includes('employer')) {
-        setSelectedRole('employer');
-      }
-    };
-
-    recognition.start();
+    annyang.start();
   };
 
   const handleColorBlindToggle = () => {
@@ -131,6 +135,11 @@ const UserType = () => {
           <p>{colorBlind ? 'Enabled' : 'Disabled'}</p>
         </div>
       </div>
+      {annyang.isListening() && (
+        <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full">
+          <i className="fas fa-microphone"></i>
+        </div>
+      )}
     </div>
   );
 };

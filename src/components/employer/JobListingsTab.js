@@ -1,5 +1,6 @@
 import React from 'react';
 import JobListingCard from './JobListingCard';
+import { Link } from 'react-router-dom';
 
 const JobListingsTab = () => {
     const jobListings = [
@@ -128,10 +129,7 @@ const JobListingsTab = () => {
 
     return (
         <div>
-            <h2 className="text-3xl font-semibold mb-8">Explore Job Listings</h2>
-            <p className="text-lg text-gray-600 mb-8">
-                All Job Listings by your companies
-            </p>
+            <p>Confused which job role to apply to? Using following link based on your tech stack decide the job roles to apply for?</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 {jobListings.map((job, index) => (
                     <JobListingCard

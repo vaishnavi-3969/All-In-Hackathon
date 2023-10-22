@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Search = () => {
     const [jobs, setJobs] = useState([]);
@@ -321,6 +322,16 @@ const Search = () => {
     return (
         <div>
             <h2 className="text-2xl font-semibold mb-4">Job Search</h2>
+
+            <Link to="https://jobrolefinder.streamlit.app/">
+                <button className='p-2 bg-green-200 md:rounded'>
+                    Job Role Finder
+                </button>
+            </Link>
+            <h2 className="text-3xl font-semibold mb-8">Explore Job Listings</h2>
+            <p className="text-lg text-gray-600 mb-8">
+                All Job Listings by your companies
+            </p>
 
             {/* Filter */}
             <div className="mb-4">

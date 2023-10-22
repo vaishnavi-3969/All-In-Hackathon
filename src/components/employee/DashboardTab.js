@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import { Link } from 'react-router-dom';
 
 const DashboardTab = () => {
   const { user } = useAuth0();
@@ -17,7 +18,11 @@ const DashboardTab = () => {
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">Welcome, {user.name}!</h2>
-
+      <Link to="https://jobrolefinder.streamlit.app/">
+        <button className='p-2 bg-green-200 md:rounded'>
+          Job Role Finder
+        </button>
+      </Link>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {insightsData.map((insight, index) => (
           <InsightCard key={index} title={insight.title} count={insight.count} />

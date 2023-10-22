@@ -44,6 +44,7 @@ const UserType = () => {
         '*speech': (speech) => {
           setRecognizedSpeech(speech);
         },
+      
       });
     }
   }, [user.email, isAuthenticated]);
@@ -79,8 +80,7 @@ const UserType = () => {
 
   const handleSpeechRecognition = () => {
     annyang.start();
-    // Add a text-to-speech message when voice recognition starts
-    speakText('Please choose your role.');
+    speakText('Please choose your role. Employee or Employeer');
   };
 
   const handleColorBlindToggle = () => {

@@ -48,7 +48,7 @@ const EmployerProfile = () => {
         onValue(userRef, (snapshot) => {
             const profileData = snapshot.val();
             if (profileData) {
-                // Load profile data into your form or state if needed.
+                
             }
         });
     }, [userRef]);
@@ -74,7 +74,6 @@ const EmployerProfile = () => {
             >
                 {({ values }) => (
                     <Form>
-                        {/* Add input fields for all your profile information */}
                         <div className="mb-4">
                             <label htmlFor="companyName">Company Name</label>
                             <Field
@@ -86,7 +85,6 @@ const EmployerProfile = () => {
                             <ErrorMessage name="companyName" component="div" className="text-red-500" />
                         </div>
 
-                        {/* ... Add more input fields here for other profile information ... */}
 
                         <button type="submit" className="bg-blue-500 text-white p-2 rounded-lg">
                             Save Profile

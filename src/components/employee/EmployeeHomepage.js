@@ -11,7 +11,7 @@ import VRWorkspace from './VRWorkspace';
 
 const EmployeeHomepage = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
-
+    
     return (
         <div>
             <EmployeeNavbar />

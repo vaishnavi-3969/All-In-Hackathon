@@ -8,7 +8,7 @@ import * as Yup from 'yup';
 
 const EmployeeProfile = () => {
     const { user } = useAuth0();
-    const [profileData, setProfileData] = useState(null); 
+    const [profileData, setProfileData] = useState(null);
     const [activeSection, setActiveSection] = useState('basicInfo');
 
     useEffect(() => {
@@ -35,22 +35,18 @@ const EmployeeProfile = () => {
                 <div className="flex">
                     <div className="w-1/4 bg-gray-100 p-4 rounded-l">
                         <h2 className="text-2xl font-bold text-blue-700 mb-4">User Profile</h2>
-                        <img src={user.picture} alt=''/>
+                        <img src={user.picture} alt="" />
                         <ul>
                             <li
                                 onClick={() => setActiveSection('basicInfo')}
-                                className={`cursor-pointer ${
-                                    activeSection === 'basicInfo' && 'text-blue-700'
-                                }`}
+                                className={`cursor-pointer ${activeSection === 'basicInfo' && 'text-blue-700'}`}
                             >
                                 Basic Info
                             </li>
                         </ul>
                     </div>
                     <div className="w-3/4 p-4 rounded-r">
-                        {activeSection === 'basicInfo' && (
-                            <BasicInfoSection profileData={profileData} />
-                        )}
+                        {activeSection === 'basicInfo' && <BasicInfoSection profileData={profileData} />}
                     </div>
                 </div>
             </div>
@@ -71,6 +67,7 @@ const BasicInfoSection = ({ profileData }) => {
                     email: user.email || '',
                     age: profileData?.basicInfo?.age || '',
                     gender: profileData?.basicInfo?.gender || '',
+                    disability: profileData?.basicInfo?.disability || '',
                 }}
                 validationSchema={Yup.object({
                     name: Yup.string().required('Name is required'),
@@ -80,6 +77,7 @@ const BasicInfoSection = ({ profileData }) => {
                         .positive('Age must be a positive number')
                         .integer('Age must be an integer'),
                     gender: Yup.string().required('Gender is required'),
+                    disability: Yup.string().nullable(),
                 })}
                 onSubmit={async (values) => {
                     const updatedProfileData = {
@@ -99,13 +97,7 @@ const BasicInfoSection = ({ profileData }) => {
                     </div>
                     <div className="mb-4">
                         <label htmlFor="email">Email</label>
-                        <Field
-                            type="email"
-                            id="email"
-                            name="email"
-                            className="border rounded w-full p-2"
-                            disabled
-                        />
+                        <Field type="email" id="email" name="email" className="border rounded w-full p-2" disabled />
                         <ErrorMessage name="email" component="div" className="text-red-500" />
                     </div>
                     <div className="mb-4">
@@ -125,10 +117,22 @@ const BasicInfoSection = ({ profileData }) => {
                         </Field>
                         <ErrorMessage name="gender" component="div" className="text-red-500" />
                     </div>
-                    <button
-                        type="submit"
-                        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                    >
+                    <div className="mb-4">
+                        <label htmlFor="disability">Disability</label>
+                        <Field as="select" id="disability" name="disability" className="border rounded w-full p-2">
+                            <option value="" disabled>
+                                Select a disability type
+                            </option>
+                            <option value="none">None</option>
+                            <option value="visual">Visual Impairment</option>
+                            <option value="hearing">Hearing Impairment</option>
+                            <option value="mobility">Mobility Impairment</option>
+                            <option value="cognitive">Cognitive Impairment</option>
+                            <option value="other">Other</option>
+                        </Field>
+                        <ErrorMessage name="disability" component="div" className="text-red-500" />
+                    </div>
+                    <button onClick={handleSubmit} type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
                         Save
                     </button>
                 </Form>

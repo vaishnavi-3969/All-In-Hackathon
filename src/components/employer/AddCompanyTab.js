@@ -13,6 +13,13 @@ const validationSchema = Yup.object().shape({
     officialWebsite: Yup.string().url('Invalid URL format'),
     diversity: Yup.string(),
     workplaceCulture: Yup.string(),
+    isDisabledFriendly: Yup.boolean(),
+    disabledFacilities: Yup.object().shape({
+        wheelchairAccess: Yup.boolean(),
+        accommodations: Yup.boolean(),
+        inclusiveSalary: Yup.boolean(),
+        other: Yup.string(),
+    }),
 });
 
 const initialValues = {
@@ -23,6 +30,13 @@ const initialValues = {
     officialWebsite: '',
     diversity: '',
     workplaceCulture: '',
+    isDisabledFriendly: false,
+    disabledFacilities: {
+        wheelchairAccess: false,
+        accommodations: false,
+        inclusiveSalary: false,
+        other: '',
+    },
 };
 
 const AddCompanyTab = () => {
@@ -60,88 +74,138 @@ const AddCompanyTab = () => {
                     resetForm();
                 }}
             >
-                <Form>
-                    <div className="mb-4">
-                        <label htmlFor="companyName">Company Name</label>
-                        <Field
-                            type="text"
-                            id="companyName"
-                            name="companyName"
-                            className="border p-2 rounded"
-                        />
-                        <ErrorMessage name="companyName" component="div" className="text-red-500" />
-                    </div>
+                {({ values }) => (
+                    <Form>
+                        <div className="mb-4">
+                            <label htmlFor="companyName">Company Name</label>
+                            <Field
+                                type="text"
+                                id="companyName"
+                                name="companyName"
+                                className="border p-2 rounded"
+                            />
+                            <ErrorMessage name="companyName" component="div" className="text-red-500" />
+                        </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="companyDescription">Company Description</label>
-                        <Field
-                            as="textarea"
-                            id="companyDescription"
-                            name="companyDescription"
-                            className="border p-2 rounded"
-                        />
-                        <ErrorMessage name="companyDescription" component="div" className="text-red-500" />
-                    </div>
+                        <div className="mb-4">
+                            <label htmlFor="companyDescription">Company Description</label>
+                            <Field
+                                as="textarea"
+                                id="companyDescription"
+                                name="companyDescription"
+                                className="border p-2 rounded"
+                            />
+                            <ErrorMessage name="companyDescription" component="div" className="text-red-500" />
+                        </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="companySize">Company Size</label>
-                        <Field
-                            type="text"
-                            id="companySize"
-                            name="companySize"
-                            className="border p-2 rounded"
-                        />
-                        <ErrorMessage name="companySize" component="div" className="text-red-500" />
-                    </div>
+                        <div className="mb-4">
+                            <label htmlFor="companySize">Company Size</label>
+                            <Field
+                                type="text"
+                                id="companySize"
+                                name="companySize"
+                                className="border p-2 rounded"
+                            />
+                            <ErrorMessage name="companySize" component="div" className="text-red-500" />
+                        </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="industry">Industry</label>
-                        <Field
-                            type="text"
-                            id="industry"
-                            name="industry"
-                            className="border p-2 rounded"
-                        />
-                        <ErrorMessage name="industry" component="div" className="text-red-500" />
-                    </div>
+                        <div className="mb-4">
+                            <label htmlFor="industry">Industry</label>
+                            <Field
+                                type="text"
+                                id="industry"
+                                name="industry"
+                                className="border p-2 rounded"
+                            />
+                            <ErrorMessage name="industry" component="div" className="text-red-500" />
+                        </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="officialWebsite">Official Website</label>
-                        <Field
-                            type="url"
-                            id="officialWebsite"
-                            name="officialWebsite"
-                            className="border p-2 rounded"
-                        />
-                        <ErrorMessage name="officialWebsite" component="div" className="text-red-500" />
-                    </div>
+                        <div className="mb-4">
+                            <label htmlFor="officialWebsite">Official Website</label>
+                            <Field
+                                type="url"
+                                id="officialWebsite"
+                                name="officialWebsite"
+                                className="border p-2 rounded"
+                            />
+                            <ErrorMessage name="officialWebsite" component="div" className="text-red-500" />
+                        </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="diversity">Diversity</label>
-                        <Field
-                            type="text"
-                            id="diversity"
-                            name="diversity"
-                            className="border p-2 rounded"
-                        />
-                        <ErrorMessage name="diversity" component="div" className="text-red-500" />
-                    </div>
+                        <div className="mb-4">
+                            <label htmlFor="diversity">Diversity</label>
+                            <Field
+                                type="text"
+                                id="diversity"
+                                name="diversity"
+                                className="border p-2 rounded"
+                            />
+                            <ErrorMessage name="diversity" component="div" className="text-red-500" />
+                        </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="workplaceCulture">Workplace Culture</label>
-                        <Field
-                            as="textarea"
-                            id="workplaceCulture"
-                            name="workplaceCulture"
-                            className="border p-2 rounded"
-                        />
-                        <ErrorMessage name="workplaceCulture" component="div" className="text-red-500" />
-                    </div>
+                        <div className="mb-4">
+                            <label htmlFor="workplaceCulture">Workplace Culture</label>
+                            <Field
+                                as="textarea"
+                                id="workplaceCulture"
+                                name="workplaceCulture"
+                                className="border p-2 rounded"
+                            />
+                            <ErrorMessage name="workplaceCulture" component="div" className="text-red-500" />
+                        </div>
 
-                    <button type="submit" className="bg-blue-500 text-white p-2 rounded-lg">
-                        Add Company
-                    </button>
-                </Form>
+                        <div className="mb-4">
+                            <label htmlFor="isDisabledFriendly">Disabled-Friendly</label>
+                            <Field
+                                type="checkbox"
+                                id="isDisabledFriendly"
+                                name="isDisabledFriendly"
+                            />
+                        </div>
+
+                        {values.isDisabledFriendly && (
+                            <div className="mb-4">
+                                <label>Disabled-Friendly Facilities:</label>
+                                <div className="ml-4">
+                                    <Field
+                                        type="checkbox"
+                                        id="disabledFacilities.wheelchairAccess"
+                                        name="disabledFacilities.wheelchairAccess"
+                                    />
+                                    <label htmlFor="disabledFacilities.wheelchairAccess">Wheelchair Access</label>
+                                </div>
+                                <div className="ml-4">
+                                    <Field
+                                        type="checkbox"
+                                        id="disabledFacilities.accommodations"
+                                        name="disabledFacilities.accommodations"
+                                    />
+                                    <label htmlFor="disabledFacilities.accommodations">Accommodations</label>
+                                </div>
+                                <div className="ml-4">
+                                    <Field
+                                        type="checkbox"
+                                        id="disabledFacilities.inclusiveSalary"
+                                        name="disabledFacilities.inclusiveSalary"
+                                    />
+                                    <label htmlFor="disabledFacilities.inclusiveSalary">Inclusive Salary</label>
+                                </div>
+                                <div className="ml-4">
+                                    <label htmlFor="disabledFacilities.other">Other:</label>
+                                    <Field
+                                        type="text"
+                                        id="disabledFacilities.other"
+                                        name="disabledFacilities.other"
+                                        className="border p-2 rounded"
+                                    />
+                                </div>
+                            </div>
+                        )}
+
+                        <button type="submit" className="bg-blue-500 text-white p-2 rounded-lg">
+                            Add Company
+                        </button>
+                    </Form>
+                )}
             </Formik>
 
             <hr className="my-6" />

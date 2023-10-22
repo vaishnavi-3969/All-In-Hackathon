@@ -4,6 +4,8 @@ import DashboardTab from './Dashboard';
 import JobListingsTab from './JobListingsTab';
 import AddCompanyTab from './AddCompanyTab';
 import CompanyProfileTab from './CompanyProfileTab';
+import MessagesTab from './MessagesTab';
+import SettingsTab from './SettingsTab';
 
 const EmployerHomepage = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
@@ -43,12 +45,28 @@ const EmployerHomepage = () => {
                     >
                         Add Company
                     </TabButton>
+                    <TabButton
+                        activeTab={activeTab}
+                        tabName="messages"
+                        setActiveTab={setActiveTab}
+                    >
+                        Messages
+                    </TabButton>
+                    <TabButton
+                        activeTab={activeTab}
+                        tabName="settings"
+                        setActiveTab={setActiveTab}
+                    >
+                        Settings
+                    </TabButton>
                 </div>
 
                 {activeTab === 'dashboard' && <DashboardTab />}
                 {activeTab === 'jobListings' && <JobListingsTab />}
                 {activeTab === 'companyProfile' && <CompanyProfileTab />}
                 {activeTab === 'addCompany' && <AddCompanyTab />}
+                {activeTab === 'messages' && <MessagesTab />}
+                {activeTab === 'settings' && <SettingsTab />}
             </div>
         </div>
     );
@@ -57,20 +75,15 @@ const EmployerHomepage = () => {
 const TabButton = ({ activeTab, tabName, setActiveTab, children }) => {
     return (
         <button
-            className={`text-lg ${
-                activeTab === tabName
+            className={`text-lg ${activeTab === tabName
                     ? 'bg-gray-800 text-white'
                     : 'bg-green-600 text-white'
-            } border border-blue-500 rounded-lg p-2 px-4 focus:outline-none hover:bg-green-800 hover:text-white transition duration-300`}
+                } border border-blue-500 rounded-lg p-2 px-4 focus:outline-none hover:bg-green-800 hover:text-white transition duration-300`}
             onClick={() => setActiveTab(tabName)}
         >
             {children}
         </button>
     );
 };
-
-
-
-
 
 export default EmployerHomepage;

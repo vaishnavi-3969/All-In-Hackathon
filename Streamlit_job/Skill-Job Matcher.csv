@@ -1,0 +1,501 @@
+Skill 1,Job Role,Skill 2,Skill 3
+Java,Legal Department,Google Drive,MS OFFICE
+Word Press,Data Analyst,Word Press,Data Science
+Data Mining,Payroll,HR,Java
+Machine Learning,Asset Management,MS OFFICE,C/C++
+MS OFFICE,Accounting,Java,Excel
+HR,Asset Management,Excel,Machine Learning
+Excel,ML Engineer,MS OFFICE,HR
+Excel,Finances,Word Press,Excel
+Excel,Customer Relations,C/C++,Marketing
+HR,Advertising,Excel,HR
+Machine Learning,Data Analyst,C/C++,MS OFFICE
+Data Science,Advertising,Data Mining,Java
+Java,Sales and Marketing,SEO,SEO
+Excel,Legal Department,Excel,Word Press
+Data Science,Quality Assurance,Data Mining,SEO
+MS OFFICE,Sales and Marketing,Java,C/C++
+Data Science,Legal Department,Google Drive,Machine Learning
+MS OFFICE,Payroll,Java,Marketing
+SEO,Human Resources,HR,MS OFFICE
+SEO,Advertising,SEO,Google Drive
+MS OFFICE,Customer Service,Excel,HR
+Word Press,Data Analyst,Data Science,SEO
+Data Science,Advertising,SEO,SEO
+HR,ML Engineer,Machine Learning,Data Mining
+Java,Legal Department,Google Drive,Machine Learning
+Marketing,Quality Assurance,MS OFFICE,SEO
+Google Drive,Sales and Marketing,Java,C/C++
+Java,Sales and Marketing,Google Drive,SEO
+MS OFFICE,Web Developer,MS OFFICE,Data Science
+C/C++,Finances,Data Mining,SEO
+Java,Web Developer,SEO,HR
+Marketing,Accounting,Data Science,Excel
+Word Press,Asset Management,Word Press,Data Mining
+Google Drive,Data Analyst,SEO,MS OFFICE
+Excel,Research and Development,MS OFFICE,MS OFFICE
+Machine Learning,Tech Support,Data Science,Excel
+HR,Media Relations,Marketing,C/C++
+Marketing,Data Analyst,Machine Learning,Google Drive
+C/C++,Human Resources,Data Mining,C/C++
+SEO,Customer Relations,C/C++,Java
+Java,Quality Assurance,Data Science,Marketing
+C/C++,Advertising,Data Science,C/C++
+Excel,Finances,Google Drive,Word Press
+HR,Web Developer,C/C++,MS OFFICE
+Data Mining,Data Analyst,Word Press,Machine Learning
+C/C++,Advertising,Excel,MS OFFICE
+Machine Learning,Asset Management,Java,Machine Learning
+MS OFFICE,Tech Support,Google Drive,Java
+MS OFFICE,Research and Development,Excel,Excel
+Excel,Tech Support,C/C++,Java
+Data Science,Legal Department,Google Drive,Marketing
+Data Mining,Customer Service,Machine Learning,Marketing
+MS OFFICE,Asset Management,Excel,Machine Learning
+C/C++,Human Resources,Data Mining,Machine Learning
+Word Press,Customer Relations,Machine Learning,Word Press
+Machine Learning,Media Relations,MS OFFICE,Word Press
+Google Drive,Data Analyst,Word Press,Word Press
+Data Science,Payroll,MS OFFICE,Excel
+Data Science,Accounting,HR,Machine Learning
+Excel,Research and Development,Marketing,Marketing
+Word Press,Asset Management,C/C++,Data Mining
+SEO,Data Analyst,Google Drive,Excel
+Excel,Accounting,MS OFFICE,Google Drive
+Google Drive,Human Resources,Marketing,Marketing
+MS OFFICE,Customer Service,SEO,HR
+Word Press,Web Developer,Data Mining,SEO
+Word Press,Legal Department,SEO,Machine Learning
+Excel,Customer Service,Java,C/C++
+Excel,Accounting,Java,Java
+Machine Learning,Data Analyst,SEO,Google Drive
+Machine Learning,ML Engineer,SEO,Excel
+Data Science,Quality Assurance,Marketing,MS OFFICE
+Java,Tech Support,Word Press,HR
+Google Drive,Tech Support,Marketing,Data Mining
+Word Press,Human Resources,C/C++,Marketing
+MS OFFICE,Quality Assurance,C/C++,HR
+SEO,Advertising,Java,Machine Learning
+Java,Accounting,Data Science,Data Mining
+Marketing,Customer Relations,Machine Learning,Data Science
+Data Mining,Accounting,Marketing,SEO
+Word Press,Public Relations,Machine Learning,Java
+Machine Learning,Payroll,Data Mining,Data Science
+Data Mining,Research and Development,Data Science,Word Press
+MS OFFICE,Payroll,Google Drive,Java
+C/C++,Customer Relations,Data Mining,C/C++
+Java,Accounting,MS OFFICE,C/C++
+Google Drive,Quality Assurance,MS OFFICE,MS OFFICE
+Data Mining,Legal Department,Data Mining,C/C++
+Excel,Legal Department,HR,Excel
+Java,Research and Development,SEO,C/C++
+Data Mining,Finances,Excel,Machine Learning
+Excel,Tech Support,Data Science,Marketing
+Excel,Payroll,C/C++,C/C++
+HR,Customer Relations,C/C++,SEO
+Word Press,Asset Management,SEO,Data Science
+HR,Media Relations,SEO,Java
+HR,Accounting,MS OFFICE,Word Press
+Java,Asset Management,Data Science,Google Drive
+Data Science,ML Engineer,Marketing,HR
+Excel,Customer Service,Word Press,Data Mining
+Machine Learning,ML Engineer,Java,MS OFFICE
+Google Drive,Legal Department,Google Drive,Word Press
+Data Mining,Quality Assurance,Java,MS OFFICE
+Data Mining,Tech Support,Marketing,Data Science
+Excel,Web Developer,Data Mining,Data Mining
+Marketing,Payroll,Machine Learning,Google Drive
+Data Mining,Finances,Google Drive,Google Drive
+Data Mining,Research and Development,Data Science,Marketing
+SEO,Data Analyst,Data Science,SEO
+HR,Legal Department,C/C++,Java
+Marketing,Advertising,SEO,Data Mining
+Excel,Customer Service,Java,Java
+Google Drive,Asset Management,MS OFFICE,SEO
+Marketing,Advertising,Data Mining,Marketing
+MS OFFICE,Legal Department,Marketing,Word Press
+Machine Learning,Human Resources,Word Press,Google Drive
+Word Press,Legal Department,Word Press,Data Science
+Data Science,Public Relations,Machine Learning,Excel
+HR,Research and Development,Google Drive,Data Science
+Excel,Sales and Marketing,SEO,Word Press
+SEO,Payroll,Data Science,Java
+Excel,Tech Support,Machine Learning,Data Mining
+Machine Learning,Accounting,Excel,Java
+Marketing,Sales and Marketing,Java,Data Science
+MS OFFICE,Web Developer,Word Press,SEO
+C/C++,Research and Development,Word Press,MS OFFICE
+Machine Learning,Data Analyst,Machine Learning,Java
+Data Mining,ML Engineer,Excel,Data Mining
+Data Mining,Quality Assurance,SEO,Google Drive
+Java,Quality Assurance,C/C++,C/C++
+Java,Sales and Marketing,C/C++,Data Mining
+Word Press,Public Relations,Google Drive,Word Press
+C/C++,Research and Development,HR,Java
+Data Mining,Web Developer,MS OFFICE,HR
+Machine Learning,Human Resources,Machine Learning,Java
+HR,Tech Support,Word Press,Marketing
+Java,Web Developer,Data Mining,HR
+Marketing,Legal Department,Java,HR
+Marketing,Quality Assurance,Word Press,Machine Learning
+HR,Media Relations,Machine Learning,HR
+MS OFFICE,Human Resources,Java,Machine Learning
+MS OFFICE,Advertising,Data Mining,Data Mining
+C/C++,Data Analyst,Data Mining,Data Mining
+Machine Learning,Asset Management,HR,Machine Learning
+SEO,Finances,Java,SEO
+Marketing,Advertising,SEO,SEO
+HR,Research and Development,Excel,Java
+Java,Sales and Marketing,Excel,Machine Learning
+SEO,Data Analyst,Word Press,C/C++
+MS OFFICE,Human Resources,Machine Learning,MS OFFICE
+HR,Finances,Google Drive,C/C++
+SEO,Finances,Java,HR
+HR,Advertising,Excel,Google Drive
+Data Science,Sales and Marketing,Java,Java
+Machine Learning,Finances,Google Drive,Excel
+Machine Learning,Customer Service,Google Drive,Word Press
+SEO,Tech Support,Excel,SEO
+Machine Learning,Asset Management,Marketing,C/C++
+SEO,Payroll,Excel,Google Drive
+Java,Public Relations,Google Drive,Excel
+SEO,Human Resources,Google Drive,Marketing
+Excel,Accounting,Java,Data Science
+Word Press,Customer Relations,Google Drive,Excel
+SEO,Sales and Marketing,Google Drive,Java
+SEO,Human Resources,HR,Excel
+Machine Learning,Accounting,Data Mining,Word Press
+Machine Learning,Data Analyst,Data Science,C/C++
+HR,Quality Assurance,C/C++,Google Drive
+Marketing,Legal Department,Marketing,Data Mining
+Google Drive,Legal Department,Data Science,MS OFFICE
+C/C++,Research and Development,C/C++,Word Press
+Java,Customer Relations,Marketing,Word Press
+Data Mining,Customer Service,Java,Excel
+MS OFFICE,Sales and Marketing,HR,Marketing
+Java,Advertising,MS OFFICE,MS OFFICE
+Java,Asset Management,Data Science,C/C++
+Data Science,Customer Relations,Word Press,Marketing
+Excel,Quality Assurance,MS OFFICE,C/C++
+SEO,Accounting,Google Drive,Data Mining
+Data Mining,Payroll,C/C++,Word Press
+MS OFFICE,Finances,HR,Google Drive
+HR,Sales and Marketing,HR,MS OFFICE
+Machine Learning,Accounting,Marketing,C/C++
+SEO,Finances,Machine Learning,Machine Learning
+Machine Learning,Quality Assurance,Machine Learning,Word Press
+HR,Customer Service,Word Press,Marketing
+Machine Learning,Media Relations,C/C++,Excel
+C/C++,Accounting,Word Press,Data Mining
+HR,Tech Support,Excel,SEO
+Marketing,Public Relations,Java,Data Science
+C/C++,Asset Management,Excel,C/C++
+Word Press,Sales and Marketing,Machine Learning,MS OFFICE
+Data Mining,Data Analyst,Machine Learning,Word Press
+C/C++,Data Analyst,Marketing,MS OFFICE
+MS OFFICE,ML Engineer,Machine Learning,Data Science
+Java,Public Relations,Google Drive,HR
+Data Science,Public Relations,Data Science,C/C++
+Data Mining,Human Resources,SEO,Word Press
+HR,Advertising,MS OFFICE,SEO
+MS OFFICE,Human Resources,Marketing,Excel
+Excel,Human Resources,Data Science,Data Mining
+Data Mining,Research and Development,Data Mining,C/C++
+HR,Data Analyst,SEO,MS OFFICE
+SEO,Quality Assurance,Google Drive,C/C++
+Word Press,ML Engineer,Java,SEO
+Word Press,Tech Support,Data Science,Data Mining
+Excel,Asset Management,C/C++,HR
+Excel,Media Relations,C/C++,HR
+Machine Learning,Media Relations,MS OFFICE,Marketing
+Excel,Media Relations,Marketing,Word Press
+Marketing,Customer Service,Google Drive,Data Mining
+SEO,Finances,Data Mining,Marketing
+Word Press,ML Engineer,Machine Learning,Java
+Excel,Media Relations,HR,Google Drive
+MS OFFICE,Legal Department,Excel,Google Drive
+HR,Customer Service,SEO,Marketing
+C/C++,Data Analyst,Data Mining,MS OFFICE
+MS OFFICE,Data Analyst,C/C++,Word Press
+Google Drive,Media Relations,MS OFFICE,Data Mining
+Java,Accounting,Google Drive,Data Science
+MS OFFICE,ML Engineer,Machine Learning,HR
+C/C++,Research and Development,Word Press,C/C++
+MS OFFICE,Legal Department,MS OFFICE,Data Mining
+Marketing,Sales and Marketing,Java,Data Science
+Data Science,Tech Support,HR,Excel
+HR,Human Resources,Excel,Excel
+Word Press,Payroll,Google Drive,Marketing
+Data Mining,Accounting,Google Drive,Data Science
+Data Science,Tech Support,SEO,HR
+Java,Quality Assurance,Java,SEO
+Data Mining,Asset Management,Machine Learning,MS OFFICE
+HR,Quality Assurance,Data Mining,Google Drive
+Data Mining,Data Analyst,C/C++,Word Press
+Machine Learning,Advertising,Excel,MS OFFICE
+Machine Learning,Public Relations,Java,Machine Learning
+Data Mining,ML Engineer,Data Mining,Data Science
+Marketing,Finances,SEO,Machine Learning
+Google Drive,Accounting,C/C++,Marketing
+Java,Public Relations,Machine Learning,Data Science
+Java,Sales and Marketing,Word Press,HR
+Marketing,Research and Development,Word Press,Machine Learning
+Java,Media Relations,HR,Java
+Excel,Customer Service,Machine Learning,C/C++
+C/C++,Public Relations,Machine Learning,Machine Learning
+HR,Data Analyst,Machine Learning,Java
+Google Drive,Human Resources,Marketing,Machine Learning
+Word Press,Data Analyst,HR,Data Mining
+C/C++,Customer Service,Machine Learning,Java
+Data Mining,Data Analyst,Excel,Machine Learning
+Machine Learning,Legal Department,C/C++,HR
+MS OFFICE,Sales and Marketing,MS OFFICE,Word Press
+SEO,Customer Service,Java,Excel
+Machine Learning,Human Resources,HR,MS OFFICE
+HR,Legal Department,SEO,Java
+HR,Asset Management,MS OFFICE,Data Science
+Java,Public Relations,Machine Learning,MS OFFICE
+Marketing,Human Resources,SEO,Java
+SEO,ML Engineer,Data Science,HR
+C/C++,Advertising,Java,C/C++
+Google Drive,Quality Assurance,C/C++,SEO
+MS OFFICE,Tech Support,C/C++,Marketing
+Google Drive,Customer Service,Google Drive,Data Science
+Data Mining,Accounting,Data Science,Google Drive
+Excel,Asset Management,Google Drive,Java
+Data Science,Legal Department,Data Mining,Data Mining
+C/C++,Public Relations,Java,C/C++
+Excel,Data Analyst,Data Mining,MS OFFICE
+SEO,Research and Development,Java,Marketing
+SEO,Media Relations,HR,MS OFFICE
+Data Science,Asset Management,Google Drive,Machine Learning
+Java,Finances,Java,Marketing
+Google Drive,Media Relations,Java,SEO
+Google Drive,ML Engineer,Google Drive,Marketing
+Data Mining,Advertising,Data Mining,SEO
+Excel,Customer Service,Java,Data Mining
+MS OFFICE,Web Developer,Data Mining,Word Press
+Data Mining,Asset Management,Word Press,Word Press
+C/C++,Media Relations,Machine Learning,HR
+C/C++,Customer Service,Excel,Marketing
+HR,Tech Support,Google Drive,MS OFFICE
+HR,Quality Assurance,C/C++,SEO
+Machine Learning,Accounting,Excel,Java
+Word Press,Payroll,C/C++,HR
+Google Drive,Customer Service,C/C++,MS OFFICE
+Machine Learning,Media Relations,Java,Data Mining
+Excel,Research and Development,Excel,Word Press
+Marketing,Payroll,Data Science,Marketing
+C/C++,Customer Service,SEO,HR
+Google Drive,Accounting,HR,Data Science
+Google Drive,Customer Relations,C/C++,Machine Learning
+Word Press,Advertising,MS OFFICE,Data Mining
+MS OFFICE,Accounting,Data Science,Word Press
+Marketing,Public Relations,Data Science,C/C++
+SEO,Research and Development,Java,HR
+Excel,Public Relations,C/C++,MS OFFICE
+Java,Data Analyst,HR,HR
+Machine Learning,Finances,Data Science,MS OFFICE
+Machine Learning,Research and Development,Data Mining,Java
+Google Drive,Customer Relations,Machine Learning,MS OFFICE
+C/C++,Customer Service,Machine Learning,Marketing
+Google Drive,Customer Relations,MS OFFICE,Word Press
+Machine Learning,Research and Development,MS OFFICE,Marketing
+Data Science,Legal Department,Data Science,MS OFFICE
+Java,Customer Service,SEO,Marketing
+Google Drive,Advertising,Word Press,MS OFFICE
+Data Science,Customer Service,Excel,Word Press
+Google Drive,Advertising,Marketing,Data Mining
+Word Press,Data Analyst,Java,Java
+Word Press,Advertising,HR,Word Press
+SEO,Finances,Google Drive,Word Press
+Excel,Payroll,C/C++,Word Press
+Google Drive,Media Relations,Marketing,Excel
+HR,Customer Service,Google Drive,C/C++
+Data Science,Payroll,Java,Marketing
+Java,Tech Support,MS OFFICE,SEO
+Word Press,Asset Management,Data Mining,SEO
+C/C++,Legal Department,Java,Data Science
+HR,Data Analyst,Data Mining,MS OFFICE
+C/C++,Web Developer,Excel,SEO
+Word Press,Legal Department,Data Mining,Google Drive
+Excel,Accounting,Data Mining,MS OFFICE
+Data Mining,Advertising,Word Press,Google Drive
+Data Mining,ML Engineer,SEO,Data Science
+C/C++,Web Developer,Java,SEO
+C/C++,Human Resources,MS OFFICE,Google Drive
+Data Science,Quality Assurance,Machine Learning,Marketing
+Google Drive,Customer Service,Machine Learning,Data Mining
+Machine Learning,Advertising,HR,Google Drive
+Data Science,Legal Department,HR,Data Mining
+C/C++,Data Analyst,MS OFFICE,Java
+SEO,Advertising,Marketing,Word Press
+Machine Learning,ML Engineer,Machine Learning,Word Press
+Marketing,Public Relations,Machine Learning,HR
+Data Mining,Tech Support,Word Press,Data Mining
+Marketing,Advertising,Word Press,Marketing
+C/C++,Sales and Marketing,Google Drive,Data Science
+Java,Payroll,Excel,C/C++
+Data Science,Quality Assurance,C/C++,Machine Learning
+Google Drive,Advertising,MS OFFICE,HR
+C/C++,Payroll,Machine Learning,C/C++
+MS OFFICE,Customer Service,Data Science,MS OFFICE
+Machine Learning,Public Relations,Excel,Word Press
+HR,Quality Assurance,Data Science,Excel
+SEO,Human Resources,Data Science,Data Mining
+Word Press,Finances,SEO,C/C++
+Data Science,Payroll,Java,Google Drive
+Google Drive,Tech Support,C/C++,Marketing
+Word Press,Customer Service,SEO,C/C++
+Marketing,Human Resources,Data Mining,Data Mining
+Data Mining,ML Engineer,Data Science,Java
+Marketing,Data Analyst,Word Press,Excel
+C/C++,Customer Relations,Google Drive,Data Mining
+MS OFFICE,Customer Relations,Data Science,Word Press
+MS OFFICE,Finances,Excel,Data Mining
+Java,Accounting,Java,C/C++
+MS OFFICE,Payroll,Java,HR
+Java,Media Relations,MS OFFICE,Google Drive
+Data Mining,Payroll,Google Drive,Data Mining
+Google Drive,Sales and Marketing,MS OFFICE,HR
+MS OFFICE,Tech Support,SEO,Marketing
+Marketing,Customer Relations,Marketing,MS OFFICE
+Machine Learning,Tech Support,MS OFFICE,Java
+Java,Legal Department,Google Drive,Marketing
+SEO,Web Developer,SEO,MS OFFICE
+Google Drive,Legal Department,Data Science,Machine Learning
+Marketing,Payroll,Machine Learning,Excel
+SEO,Asset Management,Data Science,Excel
+Machine Learning,Finances,Data Science,Machine Learning
+Java,Finances,SEO,Excel
+Java,Customer Service,Data Mining,Java
+Machine Learning,Asset Management,HR,Machine Learning
+MS OFFICE,Asset Management,C/C++,Java
+Data Mining,Human Resources,Word Press,Marketing
+HR,Customer Relations,Java,Marketing
+Google Drive,Human Resources,HR,SEO
+C/C++,Asset Management,Java,Google Drive
+Data Science,Quality Assurance,Machine Learning,SEO
+Word Press,Customer Relations,Word Press,SEO
+Word Press,Customer Service,MS OFFICE,Marketing
+Marketing,Quality Assurance,Data Science,Excel
+SEO,Accounting,Excel,SEO
+Google Drive,Tech Support,Data Science,Word Press
+SEO,Public Relations,MS OFFICE,Data Mining
+Marketing,Quality Assurance,SEO,Excel
+Google Drive,Web Developer,HR,Data Mining
+MS OFFICE,Human Resources,Word Press,Marketing
+Marketing,Quality Assurance,Data Science,Marketing
+Marketing,Data Analyst,Data Science,Machine Learning
+MS OFFICE,Tech Support,Marketing,Data Science
+SEO,Accounting,HR,HR
+Word Press,Research and Development,Marketing,Java
+SEO,Customer Service,Marketing,Machine Learning
+SEO,ML Engineer,SEO,Java
+MS OFFICE,Asset Management,Google Drive,Machine Learning
+Java,Sales and Marketing,Marketing,Machine Learning
+Google Drive,ML Engineer,SEO,Data Mining
+HR,ML Engineer,Marketing,Machine Learning
+Excel,Advertising,SEO,Data Science
+Machine Learning,Legal Department,MS OFFICE,MS OFFICE
+Google Drive,Sales and Marketing,Marketing,MS OFFICE
+Word Press,Research and Development,Data Science,Machine Learning
+Machine Learning,Research and Development,SEO,Google Drive
+Machine Learning,Advertising,HR,Excel
+HR,Public Relations,C/C++,Excel
+Word Press,Research and Development,Data Mining,Google Drive
+C/C++,Quality Assurance,HR,Excel
+Data Mining,Asset Management,Data Mining,Marketing
+Word Press,Advertising,Data Mining,Data Mining
+Data Science,Asset Management,Marketing,Machine Learning
+C/C++,Public Relations,Word Press,HR
+MS OFFICE,Quality Assurance,SEO,Marketing
+Data Mining,Public Relations,Machine Learning,Machine Learning
+Google Drive,ML Engineer,Machine Learning,HR
+Machine Learning,Public Relations,Data Mining,Excel
+Excel,Media Relations,Data Mining,C/C++
+Data Mining,Human Resources,Google Drive,Data Mining
+Word Press,Finances,Excel,Word Press
+Data Mining,Research and Development,Data Science,Google Drive
+Data Science,Media Relations,Excel,Machine Learning
+Google Drive,Tech Support,MS OFFICE,MS OFFICE
+HR,Quality Assurance,Excel,Data Mining
+Google Drive,Asset Management,Marketing,SEO
+HR,Legal Department,Word Press,Google Drive
+Java,Media Relations,C/C++,Google Drive
+Excel,Quality Assurance,Word Press,C/C++
+Machine Learning,Legal Department,MS OFFICE,Google Drive
+SEO,Legal Department,Data Mining,Machine Learning
+Marketing,Quality Assurance,Excel,Data Mining
+HR,Customer Service,Marketing,SEO
+Data Mining,Tech Support,SEO,SEO
+Excel,Research and Development,Google Drive,Google Drive
+Excel,Data Analyst,Excel,Data Science
+C/C++,Asset Management,HR,Marketing
+Java,Legal Department,Google Drive,Data Mining
+Data Mining,Accounting,Data Science,C/C++
+HR,Legal Department,MS OFFICE,Word Press
+SEO,Web Developer,Java,SEO
+Java,Media Relations,Excel,Word Press
+Excel,Payroll,Machine Learning,Data Science
+Java,Legal Department,Data Mining,Data Science
+Data Mining,Quality Assurance,Data Science,C/C++
+Google Drive,ML Engineer,HR,HR
+SEO,Quality Assurance,MS OFFICE,Google Drive
+HR,Human Resources,Marketing,Google Drive
+Data Science,ML Engineer,Excel,MS OFFICE
+Java,Advertising,C/C++,Word Press
+Machine Learning,Customer Service,MS OFFICE,Data Science
+C/C++,ML Engineer,HR,C/C++
+C/C++,Legal Department,HR,C/C++
+Google Drive,Sales and Marketing,SEO,HR
+Machine Learning,Research and Development,Data Mining,Marketing
+Marketing,Media Relations,Data Mining,Google Drive
+Data Mining,Research and Development,Word Press,HR
+Machine Learning,Customer Relations,Google Drive,Excel
+Machine Learning,Advertising,SEO,Data Science
+C/C++,Quality Assurance,MS OFFICE,SEO
+Marketing,Customer Service,Word Press,Excel
+SEO,Quality Assurance,Data Mining,Machine Learning
+Google Drive,Human Resources,Marketing,HR
+Word Press,Tech Support,HR,C/C++
+Excel,Accounting,Machine Learning,SEO
+Marketing,Quality Assurance,Google Drive,Marketing
+Java,Asset Management,Marketing,MS OFFICE
+Word Press,Customer Relations,C/C++,Excel
+Excel,Media Relations,Google Drive,SEO
+Machine Learning,Web Developer,Data Science,Data Mining
+Java,Asset Management,Word Press,Google Drive
+Data Mining,Customer Relations,C/C++,Java
+Java,Asset Management,SEO,C/C++
+HR,Sales and Marketing,Word Press,Data Science
+HR,Advertising,Java,Google Drive
+Machine Learning,Media Relations,SEO,Java
+SEO,Public Relations,Word Press,Data Mining
+SEO,Asset Management,Data Science,Excel
+Java,Data Analyst,Marketing,HR
+Data Science,Tech Support,Google Drive,MS OFFICE
+Data Mining,Human Resources,Word Press,Excel
+C/C++,Web Developer,HR,Google Drive
+Machine Learning,Human Resources,C/C++,Data Mining
+Excel,Customer Service,Data Science,MS OFFICE
+Marketing,Legal Department,C/C++,Machine Learning
+SEO,Quality Assurance,Data Science,HR
+Data Mining,Sales and Marketing,Java,MS OFFICE
+Excel,Tech Support,C/C++,Java
+Data Mining,Advertising,Machine Learning,Machine Learning
+Data Science,Customer Relations,C/C++,Java
+Data Science,ML Engineer,Java,Word Press
+Word Press,Asset Management,C/C++,HR
+Marketing,Media Relations,Google Drive,Java
+C/C++,Customer Service,Data Science,Data Science
+Excel,Media Relations,Machine Learning,C/C++
+MS OFFICE,Finances,Data Mining,Data Mining
+Machine Learning,Research and Development,Data Science,Machine Learning
+Marketing,Media Relations,Excel,Data Science
+Word Press,Accounting,Excel,Google Drive
+C/C++,Customer Relations,SEO,Java
+C/C++,Advertising,Data Mining,Data Mining
+Java,Media Relations,MS OFFICE,C/C++
+Marketing,Accounting,Excel,Marketing
+Google Drive,Customer Service,MS OFFICE,Marketing

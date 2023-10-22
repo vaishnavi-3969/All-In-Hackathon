@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import { db } from './db/Firebase';
 import annyang from 'annyang';
 
+// Import FontAwesome styles for the microphone icon
+import 'font-awesome/css/font-awesome.min.css';
+
 const UserType = () => {
   const { user, isAuthenticated } = useAuth0();
   const [selectedRole, setSelectedRole] = useState('');
@@ -40,6 +43,10 @@ const UserType = () => {
         'employer': () => {
           setSelectedRole('employer');
           handleRoleSelection();
+        },
+        // Capture recognized speech
+        '*speech': (speech) => {
+          setRecognizedSpeech(speech);
         },
       });
     }
@@ -137,7 +144,7 @@ const UserType = () => {
       </div>
       {annyang.isListening() && (
         <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full">
-          <i className="fas fa-microphone"></i>
+          <i className="fa fa-microphone" aria-hidden="true"></i>
         </div>
       )}
     </div>

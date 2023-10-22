@@ -4,8 +4,6 @@ import { collection, addDoc, updateDoc, query, where, getDocs } from 'firebase/f
 import { useNavigate } from 'react-router-dom';
 import { db } from './db/Firebase';
 import annyang from 'annyang';
-
-// Import FontAwesome styles for the microphone icon
 import 'font-awesome/css/font-awesome.min.css';
 
 const UserType = () => {
@@ -33,7 +31,6 @@ const UserType = () => {
       checkUser();
     }
 
-    // Initialize voice recognition with annyang
     if (annyang) {
       annyang.addCommands({
         'employee': () => {
@@ -44,7 +41,6 @@ const UserType = () => {
           setSelectedRole('employer');
           handleRoleSelection();
         },
-        // Capture recognized speech
         '*speech': (speech) => {
           setRecognizedSpeech(speech);
         },
@@ -83,10 +79,20 @@ const UserType = () => {
 
   const handleSpeechRecognition = () => {
     annyang.start();
+    // Add a text-to-speech message when voice recognition starts
+    speakText('Please choose your role.');
   };
 
   const handleColorBlindToggle = () => {
     setColorBlind(!colorBlind);
+  };
+
+  const speakText = (text) => {
+    if ('speechSynthesis' in window) {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+      synth.speak(utterance);
+    }
   };
 
   return (

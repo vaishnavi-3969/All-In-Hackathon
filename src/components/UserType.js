@@ -3,10 +3,14 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { collection, addDoc, updateDoc, query, where, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { db } from './db/Firebase';
+import annyang from 'annyang';
+import 'font-awesome/css/font-awesome.min.css';
 
 const UserType = () => {
   const { user, isAuthenticated } = useAuth0();
   const [selectedRole, setSelectedRole] = useState('');
+  const [recognizedSpeech, setRecognizedSpeech] = useState('');
+  const [colorBlind, setColorBlind] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,6 +29,23 @@ const UserType = () => {
       };
 
       checkUser();
+    }
+
+    if (annyang) {
+      annyang.addCommands({
+        'employee': () => {
+          setSelectedRole('employee');
+          handleRoleSelection();
+        },
+        'employer': () => {
+          setSelectedRole('employer');
+          handleRoleSelection();
+        },
+        '*speech': (speech) => {
+          setRecognizedSpeech(speech);
+        },
+      
+      });
     }
   }, [user.email, isAuthenticated]);
 
@@ -57,6 +78,23 @@ const UserType = () => {
     }
   };
 
+  const handleSpeechRecognition = () => {
+    annyang.start();
+    speakText('Please choose your role. Employee or Employeer');
+  };
+
+  const handleColorBlindToggle = () => {
+    setColorBlind(!colorBlind);
+  };
+
+  const speakText = (text) => {
+    if ('speechSynthesis' in window) {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+      synth.speak(utterance);
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-lg w-80">
@@ -83,11 +121,38 @@ const UserType = () => {
         </div>
         <button
           onClick={handleRoleSelection}
-          className="bg-gray-800 text-white font-semibold py-2 px-4 rounded hover:bg-gray-900"
+          className="bg-gray-800 text-white font-semibold py-2 px-4 rounded hover-bg-gray-900"
         >
           Submit
         </button>
+        <button
+          onClick={handleSpeechRecognition}
+          className="bg-gray-800 text-white font-semibold py-2 px-4 rounded mt-4 hover-bg-gray-900"
+        >
+          Enable Voice Recognition
+        </button>
+        <button
+          onClick={handleColorBlindToggle}
+          className="bg-gray-800 text-white font-semibold py-2 px-4 rounded mt-4 hover-bg-gray-900"
+        >
+          Toggle Color Blind Mode
+        </button>
+        {recognizedSpeech && (
+          <div className="mt-4">
+            <p className="text-gray-800">Recognized Speech:</p>
+            <p>{recognizedSpeech}</p>
+          </div>
+        )}
+        <div className="mt-4">
+          <p className="text-gray-800">Color Blind Mode:</p>
+          <p>{colorBlind ? 'Enabled' : 'Disabled'}</p>
+        </div>
       </div>
+      {annyang.isListening() && (
+        <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full">
+          <i className="fa fa-microphone" aria-hidden="true"></i>
+        </div>
+      )}
     </div>
   );
 };

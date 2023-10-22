@@ -34,15 +34,17 @@ const EmployeeNavbar = () => {
                     </Link>
                 </div>
                 <div className="flex items-center space-x-6">
-                    <motion.div
-                        initial={{ scale: 0.5 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        whileHover={{ scale: 1.2 }}
-                        className="cursor-pointer"
-                    >
-                        <FiUser className="text-2xl" />
-                    </motion.div>
+                    <Link to="../employee_profile">
+                        <motion.div
+                            initial={{ scale: 0.5 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.5 }}
+                            whileHover={{ scale: 1.2 }}
+                            className="cursor-pointer"
+                        >
+                            <FiUser className="text-2xl" />
+                        </motion.div>
+                    </Link>
                     <motion.div
                         initial={{ scale: 0.5 }}
                         animate={{ scale: 1 }}
@@ -52,15 +54,17 @@ const EmployeeNavbar = () => {
                     >
                         <FiBriefcase className="text-2xl" />
                     </motion.div>
-                    <motion.div
-                        initial={{ scale: 0.5 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        whileHover={{ scale: 1.2 }}
-                        className="cursor-pointer"
-                    >
-                        <FiInfo className="text-2xl" />
-                    </motion.div>
+                    <Link to="../about">
+                        <motion.div
+                            initial={{ scale: 0.5 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.5 }}
+                            whileHover={{ scale: 1.2 }}
+                            className="cursor-pointer"
+                        >
+                            <FiInfo className="text-2xl" />
+                        </motion.div>
+                    </Link>
                     <motion.div
                         initial={{ scale: 0.5 }}
                         animate={{ scale: 1 }}

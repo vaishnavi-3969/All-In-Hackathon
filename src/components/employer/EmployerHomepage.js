@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import EmployerNavbar from './EmployerNavbar';
 import DashboardTab from './Dashboard';
 import JobListingsTab from './JobListingsTab';
+import AddCompanyTab from './AddCompanyTab';
+import CompanyProfileTab from './CompanyProfileTab';
 
 const EmployerHomepage = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
@@ -57,9 +59,9 @@ const TabButton = ({ activeTab, tabName, setActiveTab, children }) => {
         <button
             className={`text-lg ${
                 activeTab === tabName
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-white text-blue-500'
-            } border border-blue-500 rounded-lg p-2 px-4 focus:outline-none hover:bg-blue-500 hover:text-white transition duration-300`}
+                    ? 'bg-gray-800 text-white'
+                    : 'bg-green-600 text-white'
+            } border border-blue-500 rounded-lg p-2 px-4 focus:outline-none hover:bg-green-800 hover:text-white transition duration-300`}
             onClick={() => setActiveTab(tabName)}
         >
             {children}
@@ -69,25 +71,6 @@ const TabButton = ({ activeTab, tabName, setActiveTab, children }) => {
 
 
 
-
-
-const CompanyProfileTab = () => {
-    return (
-        <div>
-            <h2 className="text-2xl font-semibold mb-4">Company Profile</h2>
-            <p>Manage your company profile information here. Share your company's commitment to inclusivity and showcase your culture to potential employees.</p>
-        </div>
-    );
-};
-
-const AddCompanyTab = () => {
-    return (
-        <div>
-            <h2 className="text-2xl font-semibold mb-4">Add Company</h2>
-            <p>Help us expand the reach of EquiHire by adding a new company. Promote inclusivity in the workforce by connecting more employers and job seekers.</p>
-        </div>
-    );
-};
 
 
 export default EmployerHomepage;

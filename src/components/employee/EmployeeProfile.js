@@ -35,6 +35,7 @@ const EmployeeProfile = () => {
                 <div className="flex">
                     <div className="w-1/4 bg-gray-100 p-4 rounded-l">
                         <h2 className="text-2xl font-bold text-blue-700 mb-4">User Profile</h2>
+                        <img src={user.picture} alt=''/>
                         <ul>
                             <li
                                 onClick={() => setActiveSection('basicInfo')}
@@ -63,6 +64,7 @@ const BasicInfoSection = ({ profileData }) => {
     return (
         <div>
             <h3 className="text-2xl font-semibold mb-4">Basic Info</h3>
+            <p className="mb-4">Update your basic information.</p>
             <Formik
                 initialValues={{
                     name: profileData?.basicInfo?.name || '',

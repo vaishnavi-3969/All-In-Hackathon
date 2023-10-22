@@ -1,9 +1,9 @@
 import React from 'react'
 
-const vrworkspace = () => {
+const VRWorkspace = () => {
   return (
-    <div>vrworkspace</div>
+    <div>VRWorkspace</div>
   )
 }
 
-export default vrworkspace
+export default VRWorkspace

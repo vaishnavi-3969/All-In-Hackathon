@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
+import Logo from '../assets/logo.png';
 
 const Homepage = () => {
     const { loginWithPopup, isAuthenticated } = useAuth0();
@@ -42,9 +43,6 @@ const Homepage = () => {
                 <div className="w-full md:w-1/2 flex flex-col">
                     <div className={`flex flex-row justify-between md:justify-start pt-12 md:pl-12 md:-mb-24`}>
                         <div>
-                            <a href="#" className={`text-${darkMode ? 'white' : 'black'} font-bold text-xl p-4`}>
-                                Logo
-                            </a>
                             <Link to="/about" className={`text-${darkMode ? 'white' : 'black'} font-bold text-xl p-4`}>About</Link>
                         </div>
                         <button onClick={toggleDarkMode} className={`bg-${darkMode ? 'white' : 'black'} text-${darkMode ? 'black' : 'white'} p-2`}>
@@ -52,7 +50,10 @@ const Homepage = () => {
                         </button>
                     </div>
                     <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-                        <p className={`text-center text-3xl`}>Welcome to "EquiHire".</p>
+                    <div className='text-center'>
+                            <img src={Logo} alt='' width={100} className="mx-auto" />
+                            <p className={`text-center text-3xl`}>Welcome to "EquiHire".</p>
+                        </div>
                         <button
                             className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'} font-bold text-lg p-2 mt-8 ${darkMode ? 'border border-white' : 'border'} cursor-pointer hover:bg-${darkMode ? 'gray-100' : 'gray-100'} hover:text-${darkMode ? 'black' : 'white'}`}
                             onClick={handleLoginAsJobSeeker}

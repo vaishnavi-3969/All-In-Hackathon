@@ -12,6 +12,7 @@ const validationSchema = Yup.object().shape({
     industry: Yup.string().required('Industry is required'),
     officialWebsite: Yup.string().url('Invalid URL format'),
     diversity: Yup.string(),
+    logoURL: Yup.string().url('Invalid URL format'),
     workplaceCulture: Yup.string(),
     isDisabledFriendly: Yup.boolean(),
     disabledFacilities: Yup.object().shape({
@@ -31,6 +32,7 @@ const initialValues = {
     diversity: '',
     workplaceCulture: '',
     isDisabledFriendly: false,
+    logoURL: '',
     disabledFacilities: {
         wheelchairAccess: false,
         accommodations: false,
@@ -54,14 +56,18 @@ const AddCompanyTab = () => {
     };
 
     useEffect(() => {
-        onValue(userRef, (snapshot) => {
+        const unsubscribe = onValue(userRef, (snapshot) => {
             const companies = [];
             snapshot.forEach((childSnapshot) => {
                 companies.push({ id: childSnapshot.key, ...childSnapshot.val() });
             });
             setCompanyList(companies);
-        });
-    }, [userRef]);
+        }, [userRef]);
+        return () => {
+            unsubscribe();
+        };
+    }, []);
+
 
     return (
         <div>
@@ -107,6 +113,16 @@ const AddCompanyTab = () => {
                                 className="border p-2 rounded"
                             />
                             <ErrorMessage name="companySize" component="div" className="text-red-500" />
+                        </div>
+                        <div className="mb-4">
+                            <label htmlFor="logoURL">Company Logo URL</label>
+                            <Field
+                                type="url"
+                                id="logoURL"
+                                name="logoURL"
+                                className="border p-2 rounded"
+                            />
+                            <ErrorMessage name="logoURL" component="div" className="text-red-500" />
                         </div>
 
                         <div className="mb-4">
@@ -210,11 +226,14 @@ const AddCompanyTab = () => {
 
             <hr className="my-6" />
             <h2 className="text-2xl font-semibold mb-4">Company Profiles</h2>
-            <ul>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {companyList.map((company) => (
-                    <li key={company.id}>
-                        <strong>{company.companyName}</strong>
-                        <p>{company.companyDescription}</p>
+                    <li key={company.id} className="border p-4 rounded-md hover:shadow-lg">
+                        <div className="flex justify-between items-center mb-4">
+                            <strong>{company.companyName}</strong>
+                            <img src={company.logoURL} alt={company.companyName} className="w-16 h-16" />
+                        </div>
+                        <p className="text-gray-600">{company.companyDescription}</p>
                     </li>
                 ))}
             </ul>

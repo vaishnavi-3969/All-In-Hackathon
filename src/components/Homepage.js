@@ -45,7 +45,7 @@ const Homepage = () => {
                     <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
                         <div className='text-center'>
                             <img src={Logo} alt='' width={100} className="mx-auto" />
-                            <p className={`text-center text-3xl`}>Welcome to "EquiHire".</p>
+                            <p className={`text-center text-3xl`}>Welcome to EquiHire.</p>
                         </div>                        <button
                             className="bg-white text-black font-bold text-lg p-2 mt-8 border cursor-pointer hover:bg-gray-100 hover:text-white"
                             onClick={handleLoginAsJobSeeker}

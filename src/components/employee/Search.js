@@ -322,7 +322,6 @@ const Search = () => {
     return (
         <div>
             <h2 className="text-2xl font-semibold mb-4">Job Search</h2>
-
             <Link to="https://jobrolefinder.streamlit.app/">
                 <button className='p-2 bg-green-200 md:rounded'>
                     Job Role Finder
@@ -348,7 +347,6 @@ const Search = () => {
                     <option value="frontend">Frontend Developer</option>
                     <option value="backend">Backend Developer</option>
                     <option value="design">UI/UX Designer</option>
-                    {/* Add more filter options here */}
                 </select>
             </div>
 

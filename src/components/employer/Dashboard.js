@@ -13,6 +13,7 @@ import {
 import { motion } from 'framer-motion';
 import { app } from '../db/Firebase';
 import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css'; 
 
 const DashboardTab = () => {
     const db = getDatabase(app);
@@ -121,7 +122,7 @@ const DashboardTab = () => {
             <div className="mt-8">
                 <h3 className="text-xl font-semibold mb-4">Today's Meetings</h3>
                 <div className="bg-white p-4 rounded-lg shadow-md">
-                    <Calendar />
+                    <Calendar className="custom-calendar" />
                 </div>
             </div>
         </div>

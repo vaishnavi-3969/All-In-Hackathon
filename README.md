@@ -1,5 +1,8 @@
-# EquiHire
-![Logo](https://github.com/vaishnavi-3969/All-In-Hackathon/assets/69362333/6518d05b-cb26-40b2-b671-668a3b8aa82a)
+
+<div align='center'>
+  <h1>EquiHire</h1>
+  <img src = "https://github.com/vaishnavi-3969/All-In-Hackathon/assets/69362333/6518d05b-cb26-40b2-b671-668a3b8aa82a" width="300px">
+</div>
 
 EquiHire is an inclusive job matching platform that aims to make the job market a more accessible space for individuals with disabilities.
 
@@ -15,8 +18,7 @@ EquiHire is an inclusive job matching platform that aims to make the job market 
 
 - **🔐Data Security**: Secure your data with Auth0 and Firebase, ensuring only authorized users access their profiles and job postings.
 
-## Tech Stack
-
+<h1>Tech Stack</h1>
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=react,tailwind,firebase,git,github" />

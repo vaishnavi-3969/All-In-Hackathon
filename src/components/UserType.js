@@ -7,6 +7,8 @@ import { db } from './db/Firebase';
 const UserType = () => {
   const { user, isAuthenticated } = useAuth0();
   const [selectedRole, setSelectedRole] = useState('');
+  const [recognizedSpeech, setRecognizedSpeech] = useState('');
+  const [colorBlind, setColorBlind] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -57,6 +59,25 @@ const UserType = () => {
     }
   };
 
+  const handleSpeechRecognition = () => {
+    const recognition = new window.webkitSpeechRecognition();
+    recognition.onresult = (event) => {
+      const speechResult = event.results[0][0].transcript.toLowerCase();
+      setRecognizedSpeech((prevSpeech) => prevSpeech + ' ' + speechResult);
+      if (speechResult.includes('employee')) {
+        setSelectedRole('employee');
+      } else if (speechResult.includes('employer')) {
+        setSelectedRole('employer');
+      }
+    };
+
+    recognition.start();
+  };
+
+  const handleColorBlindToggle = () => {
+    setColorBlind(!colorBlind);
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-lg w-80">
@@ -83,10 +104,32 @@ const UserType = () => {
         </div>
         <button
           onClick={handleRoleSelection}
-          className="bg-gray-800 text-white font-semibold py-2 px-4 rounded hover:bg-gray-900"
+          className="bg-gray-800 text-white font-semibold py-2 px-4 rounded hover-bg-gray-900"
         >
           Submit
         </button>
+        <button
+          onClick={handleSpeechRecognition}
+          className="bg-gray-800 text-white font-semibold py-2 px-4 rounded mt-4 hover-bg-gray-900"
+        >
+          Enable Voice Recognition
+        </button>
+        <button
+          onClick={handleColorBlindToggle}
+          className="bg-gray-800 text-white font-semibold py-2 px-4 rounded mt-4 hover-bg-gray-900"
+        >
+          Toggle Color Blind Mode
+        </button>
+        {recognizedSpeech && (
+          <div className="mt-4">
+            <p className="text-gray-800">Recognized Speech:</p>
+            <p>{recognizedSpeech}</p>
+          </div>
+        )}
+        <div className="mt-4">
+          <p className="text-gray-800">Color Blind Mode:</p>
+          <p>{colorBlind ? 'Enabled' : 'Disabled'}</p>
+        </div>
       </div>
     </div>
   );

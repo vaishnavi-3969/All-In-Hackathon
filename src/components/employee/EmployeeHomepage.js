@@ -67,15 +67,7 @@ const EmployeeHomepage = () => {
                     >
                         Settings
                     </TabButton>
-                    <TabButton
-                        activeTab={activeTab}
-                        tabName="vrworkspace"
-                        setActiveTab={setActiveTab}
-                    >
-                        VR Workspace
-                    </TabButton>
                 </div>
-
                 {activeTab === 'dashboard' && <DashboardTab />}
                 {activeTab === 'jobSearch' && <Search />}
                 {activeTab === 'myApplications' && <MyApplicationsTab />}

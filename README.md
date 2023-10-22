@@ -16,7 +16,7 @@ EquiHire is an inclusive job matching platform that aims to make the job market 
 
 - **Job Role Finder ML Model**: Receive personalized job recommendations based on your skills and preferences using our Machine Learning Model.
 
-- **🔐Data Security**: Secure your data with Auth0 and Firebase, ensuring only authorized users access their profiles and job postings.
+- **Data Security**: Secure your data with Auth0 and Firebase, ensuring only authorized users access their profiles and job postings.
 
 <h1>Tech Stack</h1>
 <p align="center">
